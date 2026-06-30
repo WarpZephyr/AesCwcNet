@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="AesCwcNet.AotTest/AesCwcNet.AotTest.csproj" Id="d4dc1515-f5cc-4e75-88a2-7bb114f21cf0" />
+  <Project Path="AesCwcNet/AesCwcNet.csproj" />
+</Solution>
