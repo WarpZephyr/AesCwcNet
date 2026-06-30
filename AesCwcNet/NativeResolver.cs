@@ -76,15 +76,19 @@ internal static class NativeResolver
             NativeLibraryPrefix = "lib";
             NativeLibraryExtension = ".so";
         }
-
-        NativeLibrary.SetDllImportResolver(typeof(NativeResolver).Assembly, ResolveDll);
     }
 
     /// <summary>
     /// Initializes the resolver.
     /// </summary>
     public static void Initialize()
-        => IsInitialized = true;
+    {
+        if (IsInitialized)
+            return;
+
+        NativeLibrary.SetDllImportResolver(typeof(NativeResolver).Assembly, ResolveDll);
+        IsInitialized = true;
+    }
 
     /// <summary>
     /// A native library resolver callback.
